@@ -1,0 +1,101 @@
+//
+// menu-rtl.scss
+//
+.navbar-custom {
+    .navbar-brand {
+        margin-right: auto;
+        margin-left: 0 !important;
+    }
+    .navbar-nav {
+        padding-right: 0;
+        .dropdown-toggle::after {
+            transform: translateX(3px) translateY(-1px);
+        }
+    
+        .dropdown {
+            .dropdown-menu {
+                &::before {
+                    margin-right: -155px !important;
+                    margin-left: auto;
+                    transform: rotate(135deg);
+                }
+            }
+            .dropdown-item {
+                text-align: right !important;
+            }
+        }
+        .nav-item {
+            &:last-child {
+                .nav-link{
+                    margin-right: 8px !important;
+                }
+            }
+        }
+    }
+    .social-icon {
+        margin-right: 8px !important;
+        margin-left: 0px !important;
+    }
+}
+// Nav Sticky
+.nav-sticky{
+    &.navbar-custom {
+        .navbar-brand {
+            margin-left: 0 !important;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-custom {
+        .navbar-nav {
+            .dropdown {
+                .dropdown-menu {
+                    margin-left: -80px !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-custom {
+        .navbar-nav {
+            .nav-item {
+                .dropdown-toggle{
+                    &:after {
+                        float: left !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        .nav-item {
+            .dropdown-menu-right {
+                &::before {
+                    margin-right: 160px !important;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        .nav-item {
+            .dropdown-menu-right {
+                &:before {
+                    margin-right: 45px !important;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

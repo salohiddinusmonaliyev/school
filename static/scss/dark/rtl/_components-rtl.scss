@@ -1,0 +1,66 @@
+//
+// .scss
+//
+//Processbar
+.progress-box {
+    .progress {
+        .progress-value {
+            left: -15px !important;
+            right: auto;
+        }
+    }
+}
+
+//Breadcrumb
+.page-next-level{
+    .page-next {
+        li {
+            margin-right: auto;
+            margin-left: 5px !important;
+            &:last-child {
+                margin-right: auto;
+                margin-left: 0 !important;
+            }       
+            a, span {        
+                padding-right: auto;           
+                padding-left: 8px !important;           
+            }
+            span {
+                &:last-child {
+                    padding-right: auto;
+                    padding-left: 0px !important;
+                }
+            }
+        }
+    }
+}
+
+//Pagination
+.pagination {    
+    li {
+        display: inline;
+        &:first-child a {
+            border-right-width: 1px !important;
+            border-radius: 0px 4px 4px 0 !important;
+        } 
+        &:last-child a{
+            border-radius: 4px 0 0 4px !important;
+        }
+        a {
+            float: right;
+            border-left-width: 1px !important;
+            border-right-width: 0 !important;
+        }
+    }
+}
+
+//back to top
+.back-to-top {
+    left: 30px !important;
+    right: auto;
+}
+//blockquote
+.blockquote {
+    border-right: 3px solid $gray-300 !important;
+    border-left: 0;
+}

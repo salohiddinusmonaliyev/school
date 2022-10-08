@@ -1,0 +1,137 @@
+//
+// helper.scss
+//
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.section-two {
+    padding: 60px 0;
+    position: relative;
+}
+.bg-overlay {
+    background-color: $overlay;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+
+.bg-overlay-white {
+    background: $white;
+    opacity: 0.65;
+}
+
+.bg-over-image {
+    background-color: rgba(35, 37, 47, 0.5) !important;
+    background-image: url('../images/overlay.png');
+    background-repeat: repeat;
+}
+
+//Titles
+.title-heading {
+    .sub-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .heading {
+        font-weight: 700;
+        font-size: 66px;
+        letter-spacing: 1px;
+    }
+    .para-desc {
+        font-size: 17px;
+    }
+    img {
+        height: 200px;
+        border: 5px solid $gray-300;
+    }
+}
+.section-title {
+    position: relative;
+    margin-bottom: 30px;
+    .titles {
+        .title {
+            letter-spacing: 1px;
+            font-size: 26px;
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+            &.title-line {
+                &:after,
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    left: calc(50% - 45px);
+                    border-radius: 5px;
+                    top: 55px;
+                    background-color: $primary;
+                }
+                &:before {
+                    left: calc(50% + 17px);
+                }
+            }
+        }
+        span {
+            position: absolute;
+            width: 35px;
+            height: 17px;
+            left: calc(50% - 17px);
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 48px;
+                left: 2px;
+                border: 2px solid $primary;
+                border-radius: 30px 30px 30px 0;
+                transform: rotate(45deg);
+            }
+            &:after {
+                left: auto;
+                right: 2px;
+                transform: rotate(225deg);
+            }
+        }
+    }
+    
+} 
+.para-desc {
+    max-width: 700px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+    .mt-60 {
+        margin-top: 60px;
+    }
+}
+@media (max-width: 767px) {
+    .section {
+        padding: 60px 0;
+    }
+    .title-heading {
+        .heading {
+            font-size: 40px !important;
+        }
+    }
+    .section-title {
+        .title {
+            font-size: 24px;
+        }
+    }
+}

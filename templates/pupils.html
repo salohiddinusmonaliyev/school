@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+        <!-- Home Start -->
+        <section class="bg-half d-table w-100" style="background: url(https://foundationgive.com/uploads/campaigns/ambient_art/default_ambient_art_5_w2000.jpg)center center;">
+            <div class="bg-overlay bg-overlay-white"></div>
+            <div class="container">
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="page-next-level">
+                            <h4 class="title"> Bizning Faxrimiz </h4>
+                            <ul class="page-next bg-light d-inline-block py-2 px-4 mt-3 rounded mb-0">
+                                <li><a href="{% url 'home' %}" class="text-dark">Bosh Sahifa</a></li>
+                                <li>
+                                    <span class="text-primary">Bizning Faxrimiz</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  <!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Home End -->
+
+        <!-- Blog -->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row">
+                            {% for BestPupil in object_list %}
+                            <div class="col-lg-6 col-12 mb-4 pb-2">
+                                <div class="blog-post rounded shadow">
+                                    <img src="images/blog/01.jpg" class="img-fluid rounded-top" alt="">
+                                    <div class="content pt-4 pb-4 p-3">
+                                            <img src="{% static 'images/myimg.png' %}" class="avatar avatar-md shadow border mx-auto rounded-circle" alt=""><br><br>
+                                            <ul class="list-unstyled d-flex justify-content-between post-meta">
+                                                <li><i data-feather="user" class="fea icon-sm mr-1"></i><a href="javascript:void(0)" class="text-dark">{{ BestPupil.familya }} {{ BestPupil.ism }}</a></li>
+                                            </ul>
+                                            <h5 class="title text-dark">{{ BestPupil.about | safe }}</h5>
+                                            <ul class="list-unstyled mb-0 pt-3 border-top d-flex justify-content-between">
+                                                {# <li><a href="javascript:void(0)" class="text-dark">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a></li> #}
+                                                <li><i class="mdi mr-1"></i>{{ BestPupil.sinf }}-sinf</li>
+                                            </ul>
+                                    </div><!--end content-->
+                                </div><!--end blog post-->
+                            </div><!--end col-->
+                            <!-- PAGINATION START -->
+                            {% endfor %}
+                            </div><!--end col-->
+                            <!-- PAGINATION END -->
+                        </div><!--end row-->
+
+                    </div><!--end col-->
+
+                    <!-- START SIDEBAR -->
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="sidebar sticky-sidebar">
+                        </div>
+                    </div><!--end col-->
+                    <!-- END SIDEBAR -->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section>
+        <a href="#" class="back-to-top rounded text-center" id="back-to-top">
+            <i class="mdi mdi-chevron-up d-block"> </i>
+        </a>
+        <!-- Back to top -->
+{% endblock content %}

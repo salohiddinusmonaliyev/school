@@ -1,0 +1,120 @@
+//
+// menu.scss
+//
+.navbar-custom {
+    .navbar-toggler {
+        color: $dark;
+    }    
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $dark;
+            }
+        }   
+        .dropdown {
+            .dropdown-menu {
+                box-shadow: $shadow;
+                background: $white !important;
+                &:before {
+                    border: 7px solid $dark;
+                    border-color: transparent transparent $white $white;
+                    box-shadow: -3px 1px 3px 0px rgba(0, 0, 0, 0.06) !important;
+                }
+            }
+            .dropdown-item {
+                color: $dark !important;
+            }
+        }    
+        &.navbar-nav-link {
+            .nav-item {
+                .nav-link {
+                    color: $dark;
+                }
+            }
+        } 
+    }
+    .social-icon {
+        li {
+            a {
+                color: $dark;
+                border-color: $dark;
+            }
+        }
+        &.light-social-icon {
+            li {
+                a{
+                    color: $gray-200;
+                    border-color: $gray-200;
+                }
+            }
+        }
+    }
+}
+// Nav Sticky
+.nav-sticky{
+    &.navbar-custom {
+        background-color: $white !important;
+        box-shadow: 0 10px 33px rgba(0, 0, 0, .1);
+        color: $dark !important;
+        .navbar-nav {            
+            .nav-item {
+                .nav-link {
+                    color: $dark;
+                    &:hover,
+                    &:active {
+                        color: $primary !important;
+                    }
+                }
+                &.active .nav-link {
+                    .nav-link{
+                        color: $primary !important;
+                    }
+                }
+            }
+        }  
+        &.sticky-light {
+            background-color: $white;
+        }
+    }  
+    .navbar-brand {
+        color: $dark !important;
+    }
+    .social-icon {
+        &.light-social-icon {
+            li {
+                a{
+                    color: $dark;
+                    border-color: $dark;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        &::before {
+          box-shadow: -3px 1px 3px 0px rgba(0, 0, 0, 0.06) !important;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-custom {
+        background-color: $white !important;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $dark !important;
+                }
+            }
+        }
+        .social-icon {
+            &.light-social-icon {
+                li {
+                    a {
+                        color: $dark;
+                        border-color: $dark;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+//
+// components.scss
+//
+//Buttons
+@each $name,
+$value in $colors {
+    .btn-#{$name} {
+        background-color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+        color: $dark !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($value, 10%) !important;
+            border-color: darken($value, 10%) !important;
+            color: $dark !important;
+        }
+    }
+
+    .btn-outline-#{$name} {
+        border: 1px solid #{$value};
+        color: #{$value};
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus, &:not(:disabled):not(.disabled):active{
+            background-color: #{$value};
+            border-color: #{$value};
+            color: $dark !important;
+            box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        }
+    }
+}
+.btn {
+    &.btn-dark {
+        color: $white !important;
+        background: $dark;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: darken($dark, 5%) !important;
+            color: $white !important; 
+        }
+    }   
+    &.btn-outline-dark {
+        border: 1px solid $gray-100 !important;
+        color: $dark !important;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: $dark !important;
+            color: $white !important;
+        }
+    }
+    &.btn-light {
+        color: $dark !important;
+        border-color: $gray-200 !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }    
+    &.btn-outline-light {
+        border-color: $gray-200 !important;
+        color: $dark !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }
+}
+
+//Nav
+.nav-pills {
+    .nav-link{
+        color: $dark !important;
+        border: 1px solid $gray-200;
+        &.active {
+            color: $dark !important;
+            box-shadow: $shadow;
+        }
+    }
+}
+
+//Breadcrumb
+.page-next-level{
+    .page-next {
+        li {
+            &:after {
+                color: $dark; 
+            }     
+        }
+    }
+}
+
+//Pagination
+.pagination {    
+    li {
+        a {
+            color: $dark;
+            border: 1px solid $gray-100;
+            background: $white; 
+            &:hover {
+                color: $dark;
+                background: $primary;
+                border-color: $primary;
+            }
+        }
+    }              
+    .active a {
+        color: $dark;
+        background: $primary !important;
+        border-color: $primary;
+    }
+}
+
+// Loader
+#preloader {
+    background-image: linear-gradient(45deg, $dark, $dark);
+}
+          
+//Social icons
+.social-icon {
+    li {
+        a {
+            color: $gray-400;
+            border: 1px solid $gray-100;
+            &:hover {
+                color: $dark !important;
+            }
+        }
+    }
+    &.social {
+        li {
+            a {
+                color: $body-color;
+                border-color: $body-color;
+            }
+        }
+    }
+}
+//back to top
+.back-to-top {
+    color: $white;
+    background-color: $gray-400;
+    box-shadow: $shadow;
+    &:hover {
+        background-color: $primary;
+        color: $dark;
+    }
+}
+//blockquote
+.blockquote {
+    border-left: 3px solid $gray-300;
+}

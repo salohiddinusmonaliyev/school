@@ -1,0 +1,186 @@
+//
+// common.scss
+//
+//About
+.interests-desc {
+    .hobbies {
+        &:before {
+            right: 55px !important;
+            left: auto;
+        }
+    }
+}
+
+//services
+.service-wrapper {
+    .big-icon {
+        left: 0 !important;
+        right: auto;
+    }
+}
+
+
+//Blog
+.sidebar {
+    .widget {
+        .widget-search, .searchform { 
+            input[type="text"] {
+                padding-left: 45px !important;
+                padding-right: auto;
+            }
+            input[type="submit"] {
+                right: auto;
+                left: 10px !important;
+            }
+        }
+        .widget-search {
+            .searchform:after {
+                left: 16px !important;
+                right: auto;
+            }
+        }
+        .post-recent {
+            .post-recent-content {
+                padding-right: 10px !important;
+                padding-left: auto;
+            }
+        }
+        .tagcloud {
+            > a {
+                margin: 5px 0px 5px 10px !important;
+            }
+        }
+    }
+}
+.section-title {
+    .titles {
+        .title {
+            &.title-line {
+                &:after,
+                &:before {
+                    right: calc(50% - 45px) !important;
+                }
+                &:before {
+                    right: calc(50% + 17px) !important;
+                }
+            }
+        }
+        span {
+            right: calc(50% - 17px);
+        }
+    }
+    
+} 
+
+//Modern home
+.bg-modern {
+    &.bg-animation-right {
+        &:after {
+            left: 0px !important;
+            right: auto;
+            clip-path: polygon(0% 0%, 40% 0%, 65% 100%, 0% 100%) !important;
+        }
+    }
+}
+
+//Glitch Home
+.glitch-img {
+    right: 0 !important;
+    left: auto;
+} 
+
+//Creative Home
+.home-shape {
+    right: 0 !important;
+    left: auto;
+}
+
+//Resume
+.timeline-page {
+    .timeline-item {
+        .date-label-left, .duration-right {
+            margin-left: 15px !important;
+            margin-right: 0;
+        }
+        .date-label-left {            
+            float: left !important;
+            margin-right: 0;
+            margin-left: 15px !important;
+            &:after {                
+                left: -37px !important;
+                right: auto;
+            }
+        }        
+        .duration-right {
+            float: right !important;
+            margin-right: 15px !important;
+            margin-left: auto;
+            &:after {                
+                right: -37px !important;
+                left: auto;
+            }
+        }
+        .event {
+            &.event-description-right {
+                text-align: right !important;
+                margin-right: 15px !important;
+                margin-left: 0;
+            }
+            &.event-description-left {
+                text-align: left !important;
+                margin-left: 15px !important;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+//Testimonial
+.owl-carousel {
+    direction: ltr !important;
+}
+
+@media (max-width: 767px) {
+    .timeline-page {
+        margin-right: 18px !important;
+        margin-left: 0;
+        .timeline-item {
+            .duration {
+                float: right !important;
+                margin-left: 0 !important;
+                margin-right: 15px !important;
+                text-align: right !important;
+                &:after {
+                    right: -21px !important;
+                    left: auto;
+                }
+                .event {
+                    text-align: right !important;
+                    margin-right: 15px !important;
+                    margin-left: auto;
+                }
+            }
+            .event-description-left {
+                text-align: right !important;
+                margin-left: 0 !important;
+                margin-right: 15px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-full {
+        .cta-full-content {
+            text-align: right !important;
+        }    
+    }
+
+    .bg-modern {
+        &.bg-animation-right {
+            &:after { 
+                clip-path: polygon(0% 0%, 30% 0%, 65% 100%, 0% 100%) !important;
+            }
+        }
+    }
+}
