@@ -1,1 +1,1 @@
-# school
+Maktab uchun web sayt
