@@ -1,1 +1,1 @@
-Maktab uchun web sayt
+Maktab uchun veb sayt
