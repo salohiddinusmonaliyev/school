@@ -45,3 +45,19 @@ class Home(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
     def __str__(self):
         return self.blog.title
+
+class Grade(models.Model):
+    name = models.CharField(max_length=50)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, null=True)
+    def __str__(self):
+        return self.name
+
+class Pupil(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    grade = models.ForeignKey(Grade, on_delete=models.CASCADE)
+    age = models.IntegerField()
+    b_day = models.DateField()
+
+    def __str__(self):
+        return self.first_name
